@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import RouteView from './../../router/RouteView';
 import { NavLink } from "react-router-dom"
 import "./index.css"
-import Header from './herder/index';
+
+
+
+import Header from './../../components/herder/index';
 class Music extends Component {
     render() {
         const { routers } = this.props

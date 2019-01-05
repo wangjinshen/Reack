@@ -1,8 +1,12 @@
 
-import Music from './../components/music/music';
-import TopList from './../components/music/toplist/toplist';
-import Recommended from './../components/music/renk/index';
-import Seach from './../components/music/search/index';
+
+// import TopList from './../components/music/toplist/toplist';
+
+// RankingList
+import Music from './../contentais/music/music';
+import Recommended from './../contentais/music/renk/index';
+import Seach from './../contentais/music/search/index';
+import RankingList from './../contentais/music/toplist/toplist';
 
 const RouteConfig = [
     {
@@ -15,7 +19,7 @@ const RouteConfig = [
             },
             {
                 path: "/music/toplist",
-                component: TopList
+                component: RankingList
 
             },
             {
