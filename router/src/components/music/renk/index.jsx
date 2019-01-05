@@ -7,7 +7,8 @@ class Recommended extends Component {
 
     render() {
         return <div className="loaded current_page">
-            <RecommendedSwiper/>
+            this is renk
+            
 
         </div>
     }
