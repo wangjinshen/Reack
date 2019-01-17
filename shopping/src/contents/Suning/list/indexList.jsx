@@ -5,7 +5,6 @@ class List extends Component {
   
   render() {
     const { data } = this.props
-    
     return (
       <div className="section">
         <div className="sectionlist">
@@ -15,7 +14,6 @@ class List extends Component {
             })
           }
         </div>
-
       </div>
     )
   }

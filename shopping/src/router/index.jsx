@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom';
-
 class Routes extends Component {
   render() {
     const { routes } = this.props;
     const defaultsRouter = <Route path="/" component={() => {
-      return <Redirect to="/Suning/list"></Redirect>
+      return <Redirect to="/Vehicle/user/user"></Redirect>
     }} key={"defaultsRouter"} exact></Route>
     return (
       <Switch>

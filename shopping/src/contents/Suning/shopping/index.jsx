@@ -3,8 +3,14 @@ import { connect } from 'react-redux';
 import Dl from './../list/dl/index';
 
 class Shopping extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            reduceArr:props.reduceArr
+        }
+    }
     render() {
-        const { reduceArr } = this.props;
+        const { reduceArr } = this.state;
         return (
             
             <div className="sectionlist">

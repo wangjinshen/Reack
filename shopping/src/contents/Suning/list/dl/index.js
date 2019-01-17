@@ -6,8 +6,8 @@ class Dl extends Component {
         super()
         this.pricesSum = this.pricesSum.bind(this)
     }
-    add = (item, ind) => {
-        const { addItem, reduceArr, data } = this.props;
+    add = (item) => {
+        const { addItem, reduceArr } = this.props;
         let condition = reduceArr.filter((obj) => {
             return obj.promotionId === item.promotionId
         })
@@ -23,12 +23,11 @@ class Dl extends Component {
         this.pricesSum()
     }
     remove = (item, ind) => {
-        const { addItem, reduceArr, data } = this.props;
+        const { addItem, reduceArr } = this.props;
 
         let sum = Number.parseInt(item.sugType);
 
         item.sugType = sum -= 1
-        console.log(item)
         reduceArr.forEach(val => {
 
 
