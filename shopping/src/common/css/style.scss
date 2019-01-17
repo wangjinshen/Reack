@@ -1,0 +1,133 @@
+@charset 'utf-8';
+@mixin text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin texts {
+    display: flex;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+html {
+    font-size: calc(100/320*100vw);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: .16rem;
+    font-family: "楷体";
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+button,
+input,
+select,
+textarea {
+    appearance: none;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+html,
+body,
+#root,
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+ .app {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+header {
+    position: fixed;
+    background: #fff;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    height: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: thin solid #ccc;
+    flex-shrink: 0;
+}
+footer{
+    position: fixed;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    height: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 0;
+    border-top: thin solid #ccc;
+}
+.active {
+    color: gold
+}
+.sectionlist {
+    padding: .5rem 0;
+    margin-top:.4rem;
+    height: auto;
+}
+
+.sectionlist dl {
+    width: 100%;
+    height: auto;
+    display: flex;
+    dt {
+        width: 1rem;
+        height: auto;
+        text-align: center;
+        line-height: 1rem;
+        img {
+            width: 80%;
+            height: auto;
+        }
+    }
+    dd {
+        flex: 1;
+        padding: 0 .1rem;
+        h3 {
+            @include texts;
+            height: .38rem;
+            word-break: break-all;
+        }
+        p {
+            display: flex;
+            span {
+                padding: .02rem .08rem;
+                background: sandybrown;
+                border-radius: .05rem;
+            }
+        }
+        .add {
+            justify-content: flex-end;
+        }
+    }
+}
