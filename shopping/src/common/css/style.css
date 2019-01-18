@@ -142,8 +142,7 @@ footer {
 
 .sectionlist .cheicleNav dl {
   position: relative;
-  margin: .02rem;
-  flex: 20%;
+  width: 25%;
   height: auto;
   flex-direction: column;
   justify-content: center;

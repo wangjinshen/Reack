@@ -55,7 +55,7 @@ const initialState = {
         sum: 0,
         pricess: 0
     },
-    flog:true
+    flog:false
 
 
 }

@@ -5,6 +5,7 @@ class CehicleNav extends Component {
     constructor() {
         super()
         this.remove = this.remove.bind(this)
+        this.add = this.add.bind(this)
     }
     remove(item) {
         const { myapp, list ,updataayapp,updatalist} = this.props
@@ -19,6 +20,21 @@ class CehicleNav extends Component {
         }
         updataayapp(myapp)
         updatalist(list)
+    }
+    add(item){
+        const { myapp, list ,updataayapp,updatalist} = this.props;
+        let ind = list.indexOf(item);
+        list.splice(ind, 1);
+        item.checked = 0
+        const com = myapp.filter((val) => {
+            return val.ids === item.ids
+        });
+        if(com.length>=0){
+            myapp.push(item)
+        }
+        updataayapp(myapp)
+        updatalist(list)
+
     }
     render() {
         const { myapps, flog } = this.props
@@ -40,7 +56,11 @@ class CehicleNav extends Component {
                                             () => {
                                                 this.remove(item)
                                             }
-                                        }>-</span> : <span className="remove">+</span>
+                                        }>-</span> : <span className="remove" onClick={
+                                            ()=>{
+                                                this.add(item)
+                                            }
+                                        }>+</span>
                                     }</div> : null
                                 }
                             </dl>
